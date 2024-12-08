@@ -191,7 +191,7 @@ const About: React.FC = () => {
   <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
     <div className="bg-[#2A7CC7] text-white p-8 rounded-lg flex flex-col justify-between h-full">
       <h3 className="text-xl font-semibold">Work With Us</h3>
-      <h2 className="text-3xl font-bold mt-2">Now Let's Grow Yours</h2>
+      <h2 className="text-3xl font-bold mt-2">Now Lets Grow Yours</h2>
       <p className="text-white text-opacity-80 mt-4">
         The gradual accumulation of information about atomic and small
         scale behaviour...

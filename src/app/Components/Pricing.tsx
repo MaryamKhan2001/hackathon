@@ -137,7 +137,7 @@ const Pricing: React.FC = () => {
 
         {/* Contact Support */}
         <p className="mt-8 text-gray-600">
-          Haven't got your answer?{' '}
+          Havent got your answer?{' '}
           <a href="#" className="text-blue-500 underline">
             Contact our support
           </a>
