@@ -157,7 +157,7 @@ const Contact: React.FC = () => {
       <section className="px-6 py-12 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h4 className="text-2xl font-bold text-gray-700">Lets Talk</h4>
-          <p className="text-gray-600 mt-4">We can't wait to meet you!</p>
+          <p className="text-gray-600 mt-4">We cant wait to meet you!</p>
           <button className="px-6 py-3 mt-6 bg-blue-500 text-white rounded hover:bg-blue-600">
             Try a Free Call
           </button>
