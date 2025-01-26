@@ -1,7 +1,15 @@
 import { 
-  FacebookIcon, Search, ShoppingCart, Heart, Phone, Mail, Instagram, Youtube, Facebook, Twitter 
+  Facebook, Instagram, Youtube, Twitter, Search, ShoppingCart, Heart, Phone, Mail, Menu 
 } from 'lucide-react';
 import Link from 'next/link';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
 export default function Header() {
   return (
     <div>
@@ -32,27 +40,44 @@ export default function Header() {
 
       {/* Navbar */}
       <nav className="bg-white shadow-md">
-        <div className="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
           <a href="#" className="text-xl font-bold">Bandage</a>
 
-          {/* Navigation Links */}
-          <ul className="hidden md:flex space-x-4">
-          <li><Link href="/">Home</Link></li> 
-          <li><Link href="/Shop">Shop</Link></li>
-            <Link href="/about" ><li>About</li></Link>
-            <li><Link href="/blog" >Blog</Link></li> 
-            <li><Link href="/contact" >Contact</Link></li>
+          {/* Navigation Links for Desktop */}
+          <ul className="hidden md:flex space-x-6">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/Product">Shop</Link></li>
+            <li><Link href="/About">About</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/Contact">Contact</Link></li>
             <li><Link href="/pages">Pages</Link></li>
           </ul>
 
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center space-x-4">
-            <button className="hover:underline">Menu</button>
+          {/* Mobile Menu Icon */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger>
+                <Menu className="w-6 h-6" />
+              </SheetTrigger>
+              <SheetContent side="left">
+                <SheetHeader>
+                  <SheetTitle>Mimi chic</SheetTitle>
+                </SheetHeader>
+                <ul className="space-y-4 mt-4">
+                  <li><Link href="/">Home</Link></li>
+                  <li><Link href="/Product">Shop</Link></li>
+                  <li><Link href="/About">About</Link></li>
+                  <li><Link href="/blog">Blog</Link></li>
+                  <li><Link href="/Contact">Contact</Link></li>
+                  <li><Link href="/pages">Pages</Link></li>
+                </ul>
+              </SheetContent>
+            </Sheet>
           </div>
 
           {/* Utility Links */}
-          <div className="flex space-x-4 items-center">
+          <div className="hidden md:flex space-x-6 items-center">
             <a href="#" className="hover:underline text-sm">Login / Register</a>
             <Search className="w-5 h-5" />
             <ShoppingCart className="w-5 h-5" />
